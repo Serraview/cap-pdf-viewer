@@ -8,7 +8,7 @@ export class PdfViewerWeb extends WebPlugin implements PdfViewerPlugin {
     return options;
   }
 
-  present(options: { message: string }): void {
-    console.log('present web', options);
+  present(options: { url: string }): void {
+    console.warn('This feature is not implemented for web', options);
   }
 }
