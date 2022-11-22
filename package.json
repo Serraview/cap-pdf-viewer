@@ -17,10 +17,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jmartin107/cap-pdf-viewer.git"
+    "url": "git+https://github.com/Serraview/cap-pdf-viewer.git"
   },
   "bugs": {
-    "url": "https://github.com/jmartin107/cap-pdf-viewer/issues"
+    "url": "https://github.com/Serraview/cap-pdf-viewer/issues"
   },
   "keywords": [
     "capacitor",
