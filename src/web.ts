@@ -7,4 +7,8 @@ export class PdfViewerWeb extends WebPlugin implements PdfViewerPlugin {
     console.log('ECHO', options);
     return options;
   }
+
+  present(options: { message: string }): void {
+    console.log('present web', options);
+  }
 }

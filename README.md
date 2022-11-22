@@ -14,6 +14,7 @@ npx cap sync
 <docgen-index>
 
 * [`echo(...)`](#echo)
+* [`present(...)`](#present)
 
 </docgen-index>
 
@@ -31,6 +32,19 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 | **`options`** | <code>{ value: string; }</code> |
 
 **Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+
+--------------------
+
+
+### present(...)
+
+```typescript
+present(options: { message: string; }) => void
+```
+
+| Param         | Type                              |
+| ------------- | --------------------------------- |
+| **`options`** | <code>{ message: string; }</code> |
 
 --------------------
 
