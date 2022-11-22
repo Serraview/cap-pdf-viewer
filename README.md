@@ -39,12 +39,12 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 ### present(...)
 
 ```typescript
-present(options: { message: string; }) => void
+present(options: { url: string; }) => void
 ```
 
 | Param         | Type                              |
 | ------------- | --------------------------------- |
-| **`options`** | <code>{ message: string; }</code> |
+| **`options`** | <code>{ url: string; }</code> |
 
 --------------------
 
