@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 class WebViewController: UIViewController, WKUIDelegate {
-    
+    var activityIndicator: UIActivityIndicatorView!
     var url: String?
     
     init() {
@@ -25,11 +25,21 @@ class WebViewController: UIViewController, WKUIDelegate {
     
     var webView: WKWebView!
     
+    func initActivityIndicator() {
+        activityIndicator = UIActivityIndicatorView()
+        activityIndicator.center = view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = UIActivityIndicatorView.Style.medium
+        activityIndicator.isHidden = true
+        view.addSubview(activityIndicator)
+    }
+    
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.uiDelegate = self
         view = webView
+        initActivityIndicator()
     }
     
     
@@ -44,6 +54,14 @@ class WebViewController: UIViewController, WKUIDelegate {
         
     }
     
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+    }
 
-    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
+    }
+
 }

@@ -19,4 +19,10 @@ public class PdfViewerPlugin extends Plugin {
         ret.put("value", implementation.echo(value));
         call.resolve(ret);
     }
+
+    @PluginMethod
+    public void present(PluginCall call) {
+        String url = call.getString("url");
+        call.resolve(null);
+    }
 }
