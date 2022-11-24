@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController, WKUIDelegate {
+class WebViewController: UIViewController, WKNavigationDelegate {
     var activityIndicator: UIActivityIndicatorView!
     var url: String?
     
@@ -27,18 +27,33 @@ class WebViewController: UIViewController, WKUIDelegate {
     
     func initActivityIndicator() {
         activityIndicator = UIActivityIndicatorView()
-        activityIndicator.center = view.center
+        self.view.addSubview(activityIndicator)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        activityIndicator.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         activityIndicator.hidesWhenStopped = true
-        activityIndicator.style = UIActivityIndicatorView.Style.medium
-        activityIndicator.isHidden = true
-        view.addSubview(activityIndicator)
+        activityIndicator.style = .large
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+    
+    }
+    
+    func initWebView() {
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.navigationDelegate = self
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(webView)
+        webView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        webView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+        webView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        webView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
     
     override func loadView() {
-        let webConfiguration = WKWebViewConfiguration()
-        webView = WKWebView(frame: .zero, configuration: webConfiguration)
-        webView.uiDelegate = self
-        view = webView
+        super.loadView()
+        self.view.backgroundColor = .white
+        initWebView()
         initActivityIndicator()
     }
     
@@ -53,6 +68,7 @@ class WebViewController: UIViewController, WKUIDelegate {
         }
         
     }
+    
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         activityIndicator.isHidden = false
