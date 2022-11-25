@@ -30,15 +30,15 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@capacitor/android@^4.0.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-4.5.0.tgz#081ca5025aa7df467281b032961c34d2c5b88a02"
-  integrity sha512-GRoQ0Q1XOupU4pK3aipWfwCGXRuAq32IHpOoNSZm3Enu1/FhoOlIvHMlnnIQTpq6sBye/cqBIuYsOpPBMi3VNg==
+"@capacitor/android@^3.5.1":
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-3.9.0.tgz#73032c49e0d6cdb4bdd1c01565e28f3913f25fee"
+  integrity sha512-YTPyrh1NozEuYXWGtfqN27TLXUrLbZX9fggyd4JQ1yMaUZTmLPm5dCuznONhQ49aPkJnUJB02JfpHy/qGwa2Lw==
 
-"@capacitor/core@^4.0.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@capacitor/core/-/core-4.5.0.tgz#06b861bdc6a28b336de81e0ca0e4298343ecb5ca"
-  integrity sha512-afx+hvQIrPcHbTdsBIryE96JlfSt1Rw8cWhb1J34v6Exje6zQZQa3fQZ6gcgkON+zkDIK8u3yRcIps0xMUdsMQ==
+"@capacitor/core@^3.5.1":
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/@capacitor/core/-/core-3.9.0.tgz#ab5eccbeb02e140382e983b794ead296f1db7e6d"
+  integrity sha512-j1lL0+/7stY8YhIq1Lm6xixvUqIn89vtyH5ZpJNNmcZ0kwz6K9eLkcG6fvq1UWMDgSVZg9JrRGSFhb4LLoYOsw==
   dependencies:
     tslib "^2.1.0"
 
@@ -53,10 +53,10 @@
     minimist "^1.2.5"
     typescript "~4.2.4"
 
-"@capacitor/ios@^4.0.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@capacitor/ios/-/ios-4.5.0.tgz#44087d9aa87d4c4a96e77f588d104a786206cb6f"
-  integrity sha512-2E7hqKqZOXPKEQqvdp2g68KtfjIkGEPmLpM0vRTUug08l4C/XoPufPnHiT1Y6dEXk8c02NdnilxarfbyaajQvg==
+"@capacitor/ios@^3.5.1":
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/@capacitor/ios/-/ios-3.9.0.tgz#5e31b88701fe355cacf0c9790b319731d8b85b04"
+  integrity sha512-GezPCJIujRHnF4wbrKJx6Q/mgFz0f9rmh/steTTXQZI+nEl6mHk6NWh8235p7YbhonYi5WD0rFNirrjGg1EaGw==
 
 "@eslint/eslintrc@^0.4.3":
   version "0.4.3"

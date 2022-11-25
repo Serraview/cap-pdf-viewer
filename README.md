@@ -42,8 +42,8 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 present(options: { url: string; }) => void
 ```
 
-| Param         | Type                              |
-| ------------- | --------------------------------- |
+| Param         | Type                          |
+| ------------- | ----------------------------- |
 | **`options`** | <code>{ url: string; }</code> |
 
 --------------------
