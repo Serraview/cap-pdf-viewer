@@ -8,8 +8,8 @@
         <activity
             android:name=".PDFActivity"
             android:exported="false"
-            android:label="@string/title_activity_pdfactivity"
-            android:theme="@style/Theme.Android.NoActionBar" />
+            android:label="PDF Viewer"
+            android:theme="@style/AppTheme.NoActionBarLaunch" />
     </application>
 
 </manifest>
