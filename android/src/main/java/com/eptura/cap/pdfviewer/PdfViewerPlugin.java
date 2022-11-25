@@ -1,5 +1,8 @@
 package com.eptura.cap.pdfviewer;
 
+import android.content.Intent;
+import android.os.Bundle;
+
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
@@ -23,6 +26,12 @@ public class PdfViewerPlugin extends Plugin {
     @PluginMethod
     public void present(PluginCall call) {
         String url = call.getString("url");
+        Bundle bundle = new Bundle();
+        bundle.putString("url", url);
+
+        Intent intent = new Intent(getActivity(), PDFActivity.class);
+        getActivity().startActivity(intent, bundle);
+
         call.resolve(null);
     }
 }
