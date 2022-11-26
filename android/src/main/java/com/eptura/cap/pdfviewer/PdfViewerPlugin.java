@@ -26,11 +26,10 @@ public class PdfViewerPlugin extends Plugin {
     @PluginMethod
     public void present(PluginCall call) {
         String url = call.getString("url");
-        Bundle bundle = new Bundle();
-        bundle.putString("url", url);
 
         Intent intent = new Intent(getActivity(), PDFActivity.class);
-        getActivity().startActivity(intent, bundle);
+        intent.putExtra("url", url);
+        getActivity().startActivity(intent);
 
         call.resolve(null);
     }
